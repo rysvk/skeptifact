@@ -14,7 +14,7 @@ const App = () => {
   return (
     <div className="app-root">
       <div className="card">
-        <h1 className="title">Not So Simple Counter</h1>
+        <h1 className="title">12 out of 12 baby ... send me awaaayy !!!</h1>
 
         {/* Display Area */}
         <div className="display-area">
