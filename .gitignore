@@ -6,6 +6,10 @@
 # Node.js dependencies (if using Node.js for Cloud Functions or other tools)
 node_modules/
 
+build/
+dist/
+tmp/
+
 # Environment variables (if using a separate file for sensitive keys)
 .env
 .env.*
