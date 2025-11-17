@@ -5,6 +5,7 @@ import {
   HERO_BG_URL,
   HERO_TITLE,
   CONTENT_SECTIONS,
+  LOGO192,
 } from "./constants";
 import "./App.css";
 
@@ -50,7 +51,7 @@ export default function App() {
         <div className="container">
           {/* LOGO */}
           <div className="logo">
-            <img src="/logo192.png" alt="logo" className="logo-img" />
+            <img src={LOGO192} alt="logo" className="logo-img" />
             <span className={`site-title ${scrolled ? "inverted" : ""}`}>{SITE_TITLE}</span>
           </div>
 
@@ -67,7 +68,6 @@ export default function App() {
 
       {/* HERO SECTION */}
       <section className="hero">
-        <h1 className="hero-title">{HERO_TITLE}</h1>
       </section>
 
       {/* CONTENT SECTION */}

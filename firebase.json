@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "qrfe/build",
+    "public": "skeptifact/build",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -9,7 +9,7 @@
     "rewrites": [
       {
         "source": "**",
-        "destination": "qrfe/build/index.html"
+        "destination": "skeptifact/build/index.html"
       }
     ]
   }
