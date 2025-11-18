@@ -2,18 +2,17 @@
 export const SITE_TITLE = "Skeptifact";
 
 export const NAV_LINKS = [
-  "Legal Center",
-  "Activism",
-  "News",
-  "Events",
-  "About Us",
+  "☰",
 ];
-
-export const HERO_BG_URL =
-  "/images/background.png"; 
 
 export const LOGO192 =
   "/logo192.png"; 
+
+export const SKEPTICISMLOGO =
+  "/qmark.png"; 
+
+export const FACTCHECKINGLOGO =
+  "/fc.png"; 
 
 export const CONTENT_SECTIONS = [
   {
