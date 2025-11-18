@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import {
   SITE_TITLE,
   NAV_LINKS,
-  HERO_BG_URL,
-  HERO_TITLE,
   CONTENT_SECTIONS,
+  SKEPTICISMLOGO,
+  FACTCHECKINGLOGO,
   LOGO192,
 } from "./constants";
 import "./App.css";
@@ -18,26 +18,7 @@ export default function App() {
     };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  useEffect(() => {
-    // Try to preload the hero image so we can detect path issues early.
-    const img = new Image();
-    img.onload = () => {
-      // image loaded successfully — set CSS variable on :root
-      document.documentElement.style.setProperty('--hero-bg', `url('${HERO_BG_URL}')`);
-      console.debug('Hero background loaded:', HERO_BG_URL);
-      // log computed value to help debug CSS variable visibility
-      const val = getComputedStyle(document.documentElement).getPropertyValue('--hero-bg');
-      console.debug('Computed --hero-bg:', val);
-    };
-    img.onerror = (err) => {
-      console.error('Failed to load hero background at', HERO_BG_URL, err);
-      // leave a visible outline on .hero to indicate missing bg (optional)
-      document.documentElement.style.setProperty('--hero-bg', "none");
-    };
-    img.src = HERO_BG_URL;
-  }, []);
+  }, []); 
 
   // set the document title from constants so the browser tab shows the site title
   useEffect(() => {
@@ -59,7 +40,7 @@ export default function App() {
           <nav className="nav-links">
             {NAV_LINKS.map((item) => (
               <a key={item} href="#" className={`nav-link ${scrolled ? "scrolled" : ""}`}>
-                {item}
+              {item}
               </a>
             ))}
           </nav>
@@ -68,6 +49,19 @@ export default function App() {
 
       {/* HERO SECTION */}
       <section className="hero">
+        <div className="hero-panel hero-left">
+          <div className="hero-inner">
+          <img src={SKEPTICISMLOGO} alt="SkepticismLogo" className="hero-logo" />
+          <h2 className="hero-title">Skepticism</h2>
+          </div>
+        </div>
+
+        <div className="hero-panel hero-right">
+          <div className="hero-inner">
+          <img src={FACTCHECKINGLOGO} alt="FactCheckingLogo" className="hero-logo" />
+          <h2 className="hero-title">Fact Checking</h2>
+          </div>
+        </div>
       </section>
 
       {/* CONTENT SECTION */}
